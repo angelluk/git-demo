@@ -1,0 +1,120 @@
+/*** КАКАЯ РАБОЧАЯ ПАПКА***/ PROJECT WORK DIRECTORY
+
+  	pwd  
+
+ УСТАНОВКА КОНФИГУРАЦИИ
+
+ 	 git config --global setting value  
+
+Configure User and Email
+
+ ПРИМЕР КОНФ. ИМЯ И ЕМАИЛ
+
+  git config --global user.name "Your Name"  
+  git config --global user.email "you@someplace.com"  
+
+Example using course author's information:
+
+  git config --global user.name "Jason Taylor"  
+  git config --global user.email "jason@jasongtaylor.com"  
+
+Listing All Global Configuration Settings СПИСОК ПЕРЕМЕННЫХ КОНФИГУРАЦИИ
+
+  git config --global --list  
+
+Seeing Git's User-based Config file  ПРОСМОТР ФАЙЛА КОНФИГУРАЦИИ
+
+  cat ~/.gitconfig  
+
+
+  ИНИЦИАЛИЗАЦИЯ НОВОГО РЕПОЗИТАРИЯ
+
+    git init git-demo  
+ 
+
+
+ИЗМЕНИТЬ ДИРЕКТОРУЮ (ПАПКУ)
+
+  cd folder-name  
+
+Git ИНИЦИАЛИЗАЦИЯ С ИМЕНЕНМ ПРОЕКТА
+
+  git init [project-name]  
+
+
+
+ СПИСОК ФАЙЛОВ В ДИРЕКТОРИИ
+
+  ls  
+Lists files and folders in current directory. Without parameters, will list non-hidden folders and files.
+
+ПОЛУЧИТЬ СТАТУС - ИНФОРМАЦИЮ О РЕПОЗИТОРИИ
+
+  git status  
+Shows which files have been modified in the working directory vs Git's staging area.
+
+  ДОБАВИТЬ ФАЙЛ В ИНДЕКС (ПОТОМ В РЕПОЗИТОРИЙ)
+
+  git add file-name  
+Adds the new or newly modified file-name to Git's staging area (index).
+
+Git Commit  ОТПРАВИТЬ ФАЙЛЫ В РЕПОЗИТОРИЙ С КОММЕНТАРИЕМ
+
+  git commit -m "A really good commit message"  
+
+
+
+/* ОЧИСТИТЬ ЭКРАН ОТ КОМАНД */
+clear
+
+/* ДОБАВИТЬ В ИНДЕКС ВСЕ ФАЙЛЫ */
+	git add .
+
+
+Unstage File /* ВЫТЯНУТЬ ФАЙЛ ИЗ ИНДЕКСА (НЕ ХОТИМ КОММИТ ЕГО )
+
+  git reset HEAD file-name  
+
+/* ВЗЯТЬ ОБРАТНО ВЕРСИЮ ИЗ РЕПОЗИТОРИЯ (ЗАТЕРЕТЬ ПОСЛЕДНИЕ ИЗЕМЕНЕНИЯ С МОМЕНТА КОММИТ) */
+
+   git checkout -- file-name  
+
+/* СМОТРЕТЬ КРАТКУЮ ИСТОРИЮ  выход из списка 'q'*/
+
+    git log  git log --oneline --graph --decorate --color  
+
+/* удалить файл из репозитория */
+
+    git rm file-name 
+
+/* АПДЕЙТ ИНДЕКСА ЕСЛИ ВРУЧНУЮ УДАЛИЛ ФАЙЛ */
+    git add -u  
+
+/* СОЗДАТЬ ПАПКУ*/
+      mkdir folder-name  
+
+/*ПЕРЕМЕСТИТЬ ФАЙЛ */
+      git mv source destination  
+
+/* СОЗДАТЬ SSH Key  */
+
+  ssh-keygen -t rsa -C "your.name@your-company.com"  
+
+/* ПРОВЕРКА АУТЕНТИФИКАЦИИ */  Verify SSH authentication shh протокол */
+
+  ssh -T git@github.com  
+
+/* СОЗДАНИЕ СССЫЛКИ НА РЕПОЗИТОРИЙ В GITHUB*/
+
+  git remote add remote-name remote-repository-location  
+
+/* ПОЛУЧИТЬ СПИСОК ХАБОВ УДАЛЕННЫХ */
+
+  git remote -v  
+
+/*ОТПРАВИТЬ  ПРОЕКТ НА УДАЛЕННЫЙ РЕПОЗИТОРИЙ  '-u ' только впервый раз*/
+
+  git push -u remote-name branch-name  
+
+  /* ВНАЧАЛЕ ВСЕГДА ТЯНЕМ ПОСЛЕДНЮЮ ВЕРСИЮ А УЖЕ ПОТОМ ШЛЕМ СВОЮ */
+    pull origin master   push origin master
